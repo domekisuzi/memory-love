@@ -15,9 +15,17 @@
     </el-header>
 
     <div id="fullpage">
-      <div class="section" v-for="(section, index) in sections" :key="index">
-        <h1>{{ section.title }}</h1>
-        <p>{{ section.content }}</p>
+      <div class="section"><HomeView/>
+      </div>
+      <div class="section">
+        <AboutView/>
+      </div>
+
+      <div class="section">
+        拟合
+      </div>
+      <div class="section">
+        你好
       </div>
     </div>
 
@@ -30,8 +38,11 @@
 </template>
 <script setup>
 
-import {onMounted, ref} from "vue";
+import {nextTick, onMounted, ref} from "vue";
 import fullpage from 'fullpage.js';
+
+import HomeView from "@/views/HomeView.vue";
+import AboutView from "@/views/AboutView.vue";
 const activeIndex = ref('home');
 const handleSelect = (key, keyPath) => {
   fullpage_api.moveTo(key);
@@ -44,12 +55,16 @@ const sections = [
   { title: 'Contact', content: 'Get in touch with us.' }
 ];
 onMounted(()=>{
-  new fullpage('#fullpage', {
-    anchors: ['Home', 'About', 'Services', 'Contact'],
-    navigation: true,
-    // navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
-    showActiveTooltip: true
-  });
+
+  nextTick(()=>{
+    new fullpage('#fullpage', {
+      anchors: ['Home', 'About', 'Services', 'Contact'],
+      navigation: true,
+      // navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
+      showActiveTooltip: true
+    });
+  })
+
 })
 </script>
 <style scoped>
