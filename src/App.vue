@@ -1,76 +1,64 @@
-
-
 <template>
   <el-container class="main-container">
-    <el-header>
-      <div class="header-content">
-<!--        <img src="path/to/your/logo.png" alt="Logo" class="logo">-->
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-          <el-menu-item index="1">Home</el-menu-item>
-          <el-menu-item index="2">About</el-menu-item>
-          <el-menu-item index="3">Services</el-menu-item>
-          <el-menu-item index="4">Contact</el-menu-item>
-        </el-menu>
-      </div>
-    </el-header>
+    <CartoonNavbar />
 
     <div id="fullpage">
       <div class="section">
-        <first_start1/>
-      </div>
-      <div class="section">
-        <AboutView/>
-      </div>
 
-      <div class="section">
-        拟合
+        <CartoonImage>
+          <img src="@/assets/img.png">
+        </CartoonImage>
+<!--        <first_start1 />-->
       </div>
       <div class="section">
-        你好
+        <AboutView />
+      </div>
+      <div class="section">
+        <CartoonCard title="拟合">
+          <p>这里是拟合内容。</p>
+        </CartoonCard>
+      </div>
+      <div class="section">
+        <CartoonCard title="你好">
+          <p>这里是你好内容。</p>
+        </CartoonCard>
       </div>
     </div>
 
-    <el-footer>
-      <div class="footer-content">
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
-      </div>
-    </el-footer>
+    <CartoonFooter />
   </el-container>
 </template>
+
 <script setup>
-
-import {nextTick, onMounted, ref} from "vue";
-
+import { nextTick, onMounted, ref } from 'vue';
 import fullpage from 'fullpage.js';
 
-import HomeView from "@/views/HomeView.vue";
-import AboutView from "@/views/AboutView.vue";
-import First_start1 from "@/views/first_start1.vue";
+import HomeView from '@/views/HomeView.vue';
+import AboutView from '@/views/AboutView.vue';
+import First_start1 from '@/views/first_start1.vue';
+import CartoonNavbar from '@/components/CartoonNavbar.vue';
+import CartoonCard from '@/components/CartoonCard.vue';
+import CartoonFooter from '@/components/CartoonFooter.vue';
+import CartoonNoTitleCard from "@/components/CartoonNoTitleCard.vue";
+import CartoonImage from "@/components/CartoonImage.vue";
+
 
 const activeIndex = ref('home');
 const handleSelect = (key, keyPath) => {
   fullpage_api.moveTo(key);
 };
 
-const sections = [
-  { title: 'Home', content: 'Welcome to our homepage!' },
-  { title: 'About', content: 'Learn more about us.' },
-  { title: 'Services', content: 'Discover our services.' },
-  { title: 'Contact', content: 'Get in touch with us.' }
-];
-onMounted(()=>{
-
-  nextTick(()=>{
+onMounted(() => {
+  nextTick(() => {
     new fullpage('#fullpage', {
       anchors: ['Home', 'About', 'Services', 'Contact'],
       navigation: true,
-      // navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
-      showActiveTooltip: true
+      showActiveTooltip: true,
     });
-  })
-
-})
+  });
+});
 </script>
+
 <style scoped>
 body {
   margin: 0;
@@ -79,42 +67,12 @@ body {
 
 .el-container {
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
 }
-.main-container{
+
+.main-container {
   width: 100%;
-  /*flex: 1;*/
-  /*flex-direction: column;*/
-}
-.el-header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.logo {
-  height: 50px;
-  margin-right: 20px;
-}
-
-.el-menu-demo {
-  background-color: transparent;
-  border: none;
-}
-
-.el-menu-demo .el-menu-item {
-  color: #fff;
 }
 
 #fullpage {
@@ -128,18 +86,6 @@ body {
   align-items: center;
   text-align: center;
   height: 100vh;
-}
-
-.el-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 60px; /* Adjust padding to ensure content is not hidden behind the header */
 }
 </style>

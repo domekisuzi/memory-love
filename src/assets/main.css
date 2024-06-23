@@ -39,13 +39,22 @@ a,
     /*padding: 0 2rem;*/
   }
 }
-#fp-nav{
-  background-color: #121414;
+/* Fullpage.js navigation styles */
+#fp-nav {
+  background-color: #f5f5dc; /* Light beige background for a cartoon feel */
   display: flex;
   align-items: center;
   height: 100%;
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-#fp-nav span{
-  color: #2c3e50;
+#fp-nav ul li a span {
+  background: #ff69b4; /* Pink color for navigation dots */
+  border-radius: 50%; /* Circular dots */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Glow effect for dots */
+}
+
+#fp-nav ul li .active span {
+  background: #ffa500; /* Bright orange for active dot */
 }
