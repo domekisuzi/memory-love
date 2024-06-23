@@ -12,11 +12,15 @@
     "element-plus": "^2.7.5",
     "fullpage.js": "^4.0.22",
     "pinia": "^2.1.7",
+    "unplugin-vue-markdown": "^0.26.2",
+    "vite-plugin-doc-preview": "^0.2.1",
+    "vite-plugin-markdown-preview": "^1.1.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "vite": "^5.2.8"
+    "vite": "^5.2.8",
+    "vue-markdown-loader": "^2.5.0"
   }
 }

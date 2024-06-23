@@ -15,7 +15,8 @@
     </el-header>
 
     <div id="fullpage">
-      <div class="section"><HomeView/>
+      <div class="section">
+        <HomeView />
       </div>
       <div class="section">
         <AboutView/>
@@ -39,8 +40,9 @@
 <script setup>
 
 import {nextTick, onMounted, ref} from "vue";
-import fullpage from 'fullpage.js';
 
+import fullpage from 'fullpage.js';
+import  Page1 from "@/assets/1_life.md"
 import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
 const activeIndex = ref('home');
