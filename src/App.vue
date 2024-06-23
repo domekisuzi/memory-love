@@ -16,7 +16,7 @@
 
     <div id="fullpage">
       <div class="section">
-        <HomeView />
+        <first_start1/>
       </div>
       <div class="section">
         <AboutView/>
@@ -42,9 +42,11 @@
 import {nextTick, onMounted, ref} from "vue";
 
 import fullpage from 'fullpage.js';
-import  Page1 from "@/assets/1_life.md"
+
 import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
+import First_start1 from "@/views/first_start1.vue";
+
 const activeIndex = ref('home');
 const handleSelect = (key, keyPath) => {
   fullpage_api.moveTo(key);
