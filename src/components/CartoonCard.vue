@@ -23,12 +23,12 @@ const props = defineProps({
 
 <style scoped>
 .cartoon-card {
-  width: 300px;
+  width: 60%;
   background: linear-gradient(145deg, #f9f9f9, #e0e0e0);
   border: 5px solid #000;
   border-radius: 20px;
   box-shadow: 10px 10px 0 #000, 15px 15px 0 #ff6347;
-  position: relative;
+  /*position: relative;*/
   text-align: center;
   padding: 20px;
   margin: 20px;

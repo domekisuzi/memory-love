@@ -28,6 +28,7 @@ const handleSelect = (key, keyPath) => {
   background-color: #ffeb3b;
   border-bottom: 5px solid #000;
   padding: 10px;
+  z-index: 999;
 }
 
 .header-content {

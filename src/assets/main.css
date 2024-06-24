@@ -58,3 +58,9 @@ a,
 #fp-nav ul li .active span {
   background: #ffa500; /* Bright orange for active dot */
 }
+.fp-overflow{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
