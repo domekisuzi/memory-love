@@ -9,7 +9,9 @@
         </CartoonCard>
       </div>
       <div class="section">
-        <AboutView />
+        <CartoonCard title="开端">
+        <first_start2/>
+        </CartoonCard>
       </div>
       <div class="section">
         <CartoonCard title="拟合">
@@ -42,6 +44,7 @@ import CartoonNoTitleCard from "@/components/CartoonNoTitleCard.vue";
 import CartoonImage from "@/components/CartoonImage.vue";
 import CartoonChatBubble from "@/components/CartoonChatBubble.vue";
 import CartoonSignature from '@/components/CartoonSignature.vue';
+import First_start2 from "@/views/first_start2.vue";
 
 
 

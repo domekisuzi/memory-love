@@ -3,12 +3,11 @@
     <el-row>
       <el-col :span="24">
         <el-card>
-<!--          <p>就让我们以历史个签的形式开始叙事吧</p>-->
-<!--          <p>我的QQ历史个签，在22个历史签名中，21个都是对你说的，所以从某种意义上说是你让我变得稍微外向？？</p>-->
+
           <div class="mix">
             <CartoonSignature :signatures="signatures1"/>
-            <!--          <el-image :src="require('@/assets/img_21.png')" alt="img_21"></el-image>-->
             <p>
+              就让我们以历史个签的形式开始叙事吧，我的QQ历史个签，在22个历史签名中，21个都是对你说的，所以从某种意义上说是你让我变得稍微外向？？
               最开始的这个"My heart burning"（现在看来好羞耻），也是我们矛盾的起点，就是班里一个女生向我表白。
             </p>
           </div>
@@ -57,9 +56,7 @@
 </template>
 
 <script setup>
-import CartoonCard from '@/components/CartoonCard.vue';
-import CartoonNoTitleCard from "@/components/CartoonNoTitleCard.vue";
-import CartoonImage from "@/components/CartoonImage.vue";
+
 import CartoonChatBubble from "@/components/CartoonChatBubble.vue";
 import CartoonSignature from '@/components/CartoonSignature.vue';
 import {ref} from "vue";
@@ -82,7 +79,9 @@ const title2 = ref('大数据2002谢薇');
 <style scoped>
 p {
   margin: 10px 0;
+  font-size: small;
 }
+
 .mix{
   display: flex;
   flex-direction: row;
