@@ -13,6 +13,7 @@
     "fullpage.js": "^4.0.22",
     "pinia": "^2.1.7",
     "unplugin-vue-markdown": "^0.26.2",
+    "viewerjs": "^1.11.6",
     "vite-plugin-doc-preview": "^0.2.1",
     "vite-plugin-markdown-preview": "^1.1.1",
     "vue": "^3.4.21",

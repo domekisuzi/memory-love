@@ -4,10 +4,10 @@
     <div
         v-for="(message, index) in messages"
         :key="index"
-        :class="['chat-item', message.sender === 'me' || message.sender === 'Lv97管理员 大数据20肖砥城'? 'chat-item-right' : 'chat-item-left']"
+        :class="['chat-item', message.sender === 'me' || message.sender === 'Lv97管理员 大数据20肖砥城' || 'Lv100管理员 大数据20肖砥城' ? 'chat-item-right' : 'chat-item-left']"
     >
       <div class="avatar">
-        <div v-if="message.sender === 'me'" class="avatar-svg me-avatar">
+        <div v-if="message.sender === 'me' || message.sender === 'Lv97管理员 大数据20肖砥城'  || message.sender === 'Lv100管理员 大数据20肖砥城'" class="avatar-svg me-avatar">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="20" cy="20" r="20" fill="#4caf50"/>
             <circle cx="20" cy="14" r="6" fill="white"/>

@@ -48,7 +48,7 @@ a,
   border-radius: 10px; /* Rounded corners for a softer look */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
-
+/*调整侧边栏*/
 #fp-nav ul li a span {
   background: #ff69b4; /* Pink color for navigation dots */
   border-radius: 50%; /* Circular dots */
@@ -63,4 +63,9 @@ a,
   justify-items: center;
   align-items: center;
   justify-content: center;
+}
+
+/*去除水印*/
+.fp-watermark{
+  display: none;
 }
