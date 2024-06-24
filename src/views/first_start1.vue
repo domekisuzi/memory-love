@@ -36,9 +36,9 @@ const signatures1 =[ {
 }]
 const messages2 = ref([
   { sender: '', text: '寇一飞这byd不回我消息' },
-  { sender: 'me', text: '怎么啦' },
+  { sender: '肖砥城', text: '怎么啦' },
   { sender: '', text: '我问他租房的事情' },
-  { sender: 'me', text: '你也在这边租房么' },
+  { sender: '肖砥城', text: '你也在这边租房么' },
   { sender: '', text: '我工作的地方租房啊' }
 ]);
 

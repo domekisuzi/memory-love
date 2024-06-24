@@ -4,10 +4,10 @@
     <div
         v-for="(message, index) in messages"
         :key="index"
-        :class="['chat-item', message.sender === 'me' || message.sender === 'Lv97管理员 大数据20肖砥城' || 'Lv100管理员 大数据20肖砥城' ? 'chat-item-right' : 'chat-item-left']"
+        :class="['chat-item', isCurrentUser(message.sender) ? 'chat-item-right' : 'chat-item-left']"
     >
       <div class="avatar">
-        <div v-if="message.sender === 'me' || message.sender === 'Lv97管理员 大数据20肖砥城'  || message.sender === 'Lv100管理员 大数据20肖砥城'" class="avatar-svg me-avatar">
+        <div v-if="isCurrentUser(message.sender)" class="avatar-svg me-avatar">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="20" cy="20" r="20" fill="#4caf50"/>
             <circle cx="20" cy="14" r="6" fill="white"/>
@@ -21,7 +21,7 @@
             <path d="M14 26c0-3.314 4.686-6 6-6s6 2.686 6 6H14z" fill="#fff"/>
           </svg>
         </div>
-        <p class="avatar-name">{{ message.sender === 'me' ? '' : message.sender }}</p>
+        <p class="avatar-name">{{ isCurrentUser(message.sender) ? '' : message.sender }}</p>
       </div>
       <div class="chat-bubble">
         <div class="chat-content">
@@ -30,11 +30,16 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script setup>
 import { defineProps } from 'vue';
+
+const isCurrentUser = (sender) => {
+
+   return sender.includes('肖砥城');
+};
+
 
 const props = defineProps({
   messages: {

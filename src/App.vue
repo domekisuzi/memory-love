@@ -4,22 +4,22 @@
 
     <div id="fullpage">
       <div class="section">
-        <CartoonCard title="开端">
+        <CartoonCard title="回忆">
           <first_start1/>
         </CartoonCard>
       </div>
       <div class="section">
-        <CartoonCard title="开端">
+        <CartoonCard title="回忆">
         <first_start2/>
         </CartoonCard>
       </div>
       <div class="section">
-        <CartoonCard title="开端">
+        <CartoonCard title="回忆">
           <first_start3/>
         </CartoonCard>
       </div>
       <div class="section">
-        <CartoonCard title="开端">
+        <CartoonCard title="回忆">
           <first_start4/>
         </CartoonCard>
       </div>
@@ -27,6 +27,28 @@
       <div class="section">
         <CartoonCard title="摆烂">
           <second_depress1/>
+        </CartoonCard>
+      </div>
+      <div class="section">
+        <CartoonCard title="摆烂">
+          <second_depress2/>
+        </CartoonCard>
+      </div>
+
+      <div class="section">
+        <CartoonCard title="日常">
+          <third_life1/>
+        </CartoonCard>
+      </div>
+
+      <div class="section">
+        <CartoonCard title="日常">
+          <third_life2/>
+        </CartoonCard>
+      </div>
+      <div class="section">
+        <CartoonCard title="日常">
+          <third_life3/>
         </CartoonCard>
       </div>
     </div>
@@ -49,6 +71,10 @@ import First_start2 from "@/views/first_start2.vue";
 import First_start3 from "@/views/first_start3.vue";
 import First_start4 from "@/views/first_start4.vue";
 import Second_depress1 from "@/views/second_depress1.vue";
+import Second_depress2 from "@/views/second_depress2.vue";
+import Third_life1 from "@/views/third_life1.vue";
+import Third_life2 from "@/views/third_life2.vue";
+import Third_life3 from "@/views/third_life3.vue";
 
 
 
@@ -108,14 +134,6 @@ const messages5 = ref([
 const title5 = ref('刘文正老师');
 
 
-const signatures =[ {
-  time: '2024-06-30',
-  content: '这是一个卡通风格的个性签名组件。'
-},{
-  time: '2024-06-30',
-  content: '这是一个卡通风格的个性签名组件。'
-}
-];
 
 
 onMounted(() => {
