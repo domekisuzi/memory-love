@@ -1,0 +1,31 @@
+name: Deploy Vite Project to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 可以根据您的默认分支名称进行调整
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # 可以根据您的项目需要调整 Node.js 版本
+
+      - name: Install dependencies
+        run: npm install  # 或者使用 yarn install
+
+      - name: Build Vite project
+        run: npm run build  # 或者使用 yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages  # GitHub Pages 默认发布分支
+          FOLDER: dist  # 您的 Vite 项目构建输出目录
