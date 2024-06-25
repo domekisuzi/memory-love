@@ -1,7 +1,6 @@
 <template>
   <el-container class="main-container">
     <CartoonNavbar />
-
     <div id="fullpage">
       <div class="section">
         <CartoonCard title="回忆">
@@ -10,7 +9,7 @@
       </div>
       <div class="section">
         <CartoonCard title="回忆">
-        <first_start2/>
+          <first_start2/>
         </CartoonCard>
       </div>
       <div class="section">
@@ -51,17 +50,52 @@
           <third_life3/>
         </CartoonCard>
       </div>
-    </div>
 
+      <div class="section">
+        <CartoonCard title="最艰难的一年里">
+          <fourth_different1/>
+        </CartoonCard>
+      </div>
+      <div class="section">
+        <CartoonCard title="最艰难的一年里">
+          <fourth_different2/>
+        </CartoonCard>
+      </div>
+      <div class="section">
+        <CartoonCard title="最艰难的一年里">
+          <fourth_different3/>
+        </CartoonCard>
+      </div>
+      <div class="section">
+        <CartoonCard title="游戏">
+          <fifth_crazy1/>
+        </CartoonCard>
+      </div>
+
+      <div class="section">
+        <CartoonCard title="游戏">
+          <fifth_crazy2/>
+        </CartoonCard>
+      </div>
+
+      <div class="section">
+        <CartoonCard title="结语">
+          <sixth_over1/>
+        </CartoonCard>
+      </div>
+      <div class="section">
+        <CartoonCard title="结语">
+          <sixth_over2/>
+        </CartoonCard>
+      </div>
+    </div>
     <CartoonFooter />
   </el-container>
-
 </template>
 
 <script setup>
 import { nextTick, onMounted, ref } from 'vue';
 import fullpage from 'fullpage.js';
-
 
 import First_start1 from '@/views/first_start1.vue';
 import CartoonNavbar from '@/components/CartoonNavbar.vue';
@@ -75,71 +109,23 @@ import Second_depress2 from "@/views/second_depress2.vue";
 import Third_life1 from "@/views/third_life1.vue";
 import Third_life2 from "@/views/third_life2.vue";
 import Third_life3 from "@/views/third_life3.vue";
+import Fourth_different1 from "@/views/fourth_different1.vue";
+import Fourth_different2 from "@/views/fourth_different2.vue";
+import Fourth_different3 from "@/views/fourth_different3.vue";
+import Fifth_crazy1 from "@/views/fifth_crazy1.vue";
+import Fifth_crazy2 from "@/views/fifth_crazy2.vue";
+import Sixth_over1 from "@/views/sixth_over1.vue";
+import Sixth_over2 from "@/views/sixth_over2.vue";
 
-
-
-
-const activeIndex = ref('home');
+const activeIndex = ref('memory');
 const handleSelect = (key, keyPath) => {
   fullpage_api.moveTo(key);
 };
 
-const messages = ref([
-  { sender: 'LV54 肖桑の犬', text: '5.5才行呀' },
-  { sender: 'LV55 管理员 计卓190A杜兴宇', text: '你们是死于？' },
-  { sender: 'LV55 管理员 计卓190A杜兴宇', text: '晚修？' },
-  { sender: 'LV100 管理员大数据 21覃顺', text: '当时大数据培养方案有矛盾点' },
-  { sender: 'LV54 肖桑の犬', text: '死于晚修少一分目前看来是' },
-  { sender: 'LV25 大数据2001彭文佳', text: '@肖桑の犬加上大学语文满6分' }
-]);
-
-const title = ref('拓扑大数据部闲聊 （267）');
-
-const messages2 = ref([
-  { sender: '', text: '寇一飞这byd不回我消息' },
-  { sender: 'me', text: '怎么啦' },
-  { sender: '', text: '我问他租房的事情' },
-  { sender: 'me', text: '你也在这边租房么' },
-  { sender: '', text: '我工作的地方租房啊' }
-]);
-
-const title2 = ref('大数据2002谢薇');
-
-const messages3 = ref([
-  { sender: 'Lv97管理员 大数据20肖砥城', text: '谁通宵' },
-  { sender: 'LV97管理员 大数据20肖砥城', text: '我不是' },
-  { sender: 'LV97管理员 大数据20肖砥城', text: '我没有啊' },
-  { sender: 'LV34 寄算机21王崇文', text: '感觉不如xdcgg 直接通宵' },
-  { sender: 'LV100管理员 大数据23-1寇飞舞', text: '感觉不如xdcgg 直接通宵' },
-  { sender: 'LV100管理员 大数据23-1寇飞舞', text: '肖神已经连续好几个晚上没在宿舍' },
-  { sender: 'LV100管理员 大数据23-1寇飞舞', text: '去卷了' }
-]);
-
-const title3 = ref('拓扑大数据部闲聊 （267）');
-
-const messages4 = ref([
-  { sender: 'me', text: '啥玩意' },
-  { sender: 'me', text: '刚起' },
-  { sender: '', text: '是的' }
-]);
-const title4 = ref('寇一飞');
-const messages5 = ref([
-  { sender: '刘文正老师', text: '那房子有点烂你要做好心里准备' },
-  { sender: 'me', text: '有地方住我就已经得磕头了' },
-  { sender: '刘文正老师', text: '可以可以。' },
-  { sender: 'me', text: '你找到工作了吗' },
-  { sender: '刘文正老师', text: '最近在面吧' }
-]);
-
-const title5 = ref('刘文正老师');
-
-
-
-
 onMounted(() => {
   nextTick(() => {
     new fullpage('#fullpage', {
-      anchors: ['Home', 'About', 'Services', 'Contact'],
+      anchors: ['memory', 'memory', 'memory', 'memory','depression', 'depression', 'life','life','life','difficult', 'difficult', 'difficult','crazy','crazy','over','over'],
       navigation: true,
       showActiveTooltip: true,
       // paddingTop: '60px',
@@ -155,19 +141,15 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-
-
 .main-container {
   width: 100%;
-  /*min-height: 100vh;*/
   display: grid;
 }
 
 #fullpage {
   flex: 1;
-  /*margin-top: v-bind(--el-header-height);*/
 }
-.fullpage-wrapper{
+.fullpage-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,7 +163,5 @@ body {
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  /*padding-top: 60px; !* Adjust padding to ensure content is not hidden behind the header *!*/
 }
-
 </style>

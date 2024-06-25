@@ -1,14 +1,13 @@
-<!-- made by domekisuzi
-    @2024/6/24
--->
 <template>
   <el-header class="cartoon-navbar">
     <div class="header-content">
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1">Home</el-menu-item>
-        <el-menu-item index="2">About</el-menu-item>
-        <el-menu-item index="3">Services</el-menu-item>
-        <el-menu-item index="4">Contact</el-menu-item>
+        <el-menu-item index="memory">回忆</el-menu-item>
+        <el-menu-item index="depression">摆烂</el-menu-item>
+        <el-menu-item index="life">日常</el-menu-item>
+        <el-menu-item index="difficult">最艰难的一年里</el-menu-item>
+        <el-menu-item index="crazy">游戏</el-menu-item>
+        <el-menu-item index="over">结语</el-menu-item>
       </el-menu>
     </div>
   </el-header>
@@ -17,9 +16,9 @@
 <script setup>
 import { ref } from 'vue';
 
-const activeIndex = ref('home');
+const activeIndex = ref('memory');
 const handleSelect = (key, keyPath) => {
-  console.log(`Selected: ${key}`);
+  fullpage_api.moveTo(key);
 };
 </script>
 
@@ -53,4 +52,3 @@ const handleSelect = (key, keyPath) => {
   color: #fff;
 }
 </style>
-
