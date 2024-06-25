@@ -4,7 +4,7 @@
 <template>
   <el-footer class="cartoon-footer">
     <div class="footer-content">
-      <p>&copy; 2024 Your Company. All rights reserved.</p>
+      <p>&copy; 唐 ちぇんのこと大好き</p>
     </div>
   </el-footer>
 </template>
@@ -14,6 +14,8 @@
   background-color: #ffeb3b;
   border-top: 5px solid #000;
   padding: 10px;
+  //width: 100vw;
+
 }
 
 .footer-content {

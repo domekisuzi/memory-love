@@ -102,7 +102,7 @@ p {
 }
 .mix .char{
   display: flex;
-  width: 50%;
+  width: 70%;
   flex-direction: column;
   justify-content: center;
   justify-items: center;

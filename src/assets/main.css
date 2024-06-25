@@ -55,9 +55,10 @@ a,
   background-color: #f5f5dc; /* Light beige background for a cartoon feel */
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   border-radius: 10px; /* Rounded corners for a softer look */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+
 }
 /*调整侧边栏*/
 #fp-nav ul li a span {
