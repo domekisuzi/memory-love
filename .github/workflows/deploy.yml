@@ -23,9 +23,12 @@ jobs:
       - name: Build Vite project
         run: npm run build  # 或者使用 yarn build
 
+      - name: Build Vite project
+        run: ls  # 或者使用 yarn build
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
           BRANCH: gh-pages  # GitHub Pages 默认发布分支
-          FOLDER: 'memory-love/dist'  # 您的 Vite 项目构建输出目录
+          FOLDER: dist  # 您的 Vite 项目构建输出目录
