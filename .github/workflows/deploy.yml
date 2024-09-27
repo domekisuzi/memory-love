@@ -9,6 +9,12 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: look ls
+        run: ls  # 或者使用 yarn build
+
+      - name: look pwd
+        run: pwd  # 或者使用 yarn build;
+
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -23,16 +29,9 @@ jobs:
       - name: Build Vite project
         run: npm run build  # 或者使用 yarn build
 
-      - name: look ls
-        run: ls  # 或者使用 yarn build
-
-      - name: look pwd
-        run: pwd  # 或者使用 yarn build
-
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
-          BRANCH: main  # GitHub Pages 默认发布分支
+          BRANCH:  gh-pages  # GitHub Pages 默认发布分支
           FOLDER: dist  # 您的 Vite 项目构建输出目录
