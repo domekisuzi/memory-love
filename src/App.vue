@@ -90,7 +90,7 @@
 <script setup>
 import { nextTick, onMounted, ref } from 'vue';
 import fullpage from 'fullpage.js';
-
+// import axios from 'axios';
 import CartoonNavbar from '@/components/CartoonNavbar.vue';
 import CartoonCard from '@/components/CartoonCard.vue';
 import CartoonFooter from '@/components/CartoonFooter.vue';
@@ -110,13 +110,15 @@ import Fifth_crazy1 from '@/views/fifth_crazy1.vue';
 import Fifth_crazy2 from '@/views/fifth_crazy2.vue';
 import Sixth_over1 from '@/views/sixth_over1.vue';
 import Sixth_over2 from '@/views/sixth_over2.vue';
-
+import {getData, insertData} from "@/tool/api.js";
 const activeIndex = ref('memory');
 const handleSelect = (key, keyPath) => {
   fullpage_api.moveTo(key);
 };
 
 onMounted(() => {
+
+  startCollect()
   nextTick(() => {
     new fullpage('#fullpage', {
       menu : '#fp-nav',
@@ -140,6 +142,15 @@ onMounted(() => {
     });
   });
 });
+
+const startCollect =  () => {
+  getData().then( res =>{
+    console.log(res.data)
+    insertData(res.data)
+  })
+
+
+}
 </script>
 
 <style scoped>
