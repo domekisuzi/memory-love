@@ -10,7 +10,7 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 export default defineConfig(
 
     {
-      base: '/memory-love/',  // GitHub Pages 项目路径
+      // base: '/memory-love/',  // GitHub Pages 项目路径
       build: {
         outDir: 'dist'  // 确保这是构建输出目录
       },
@@ -29,6 +29,7 @@ export default defineConfig(
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+      //
       // server: {
       //   proxy: {
       //     '/api': {
