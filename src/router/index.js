@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import memory from "@/pages/memory.vue";
 import now from "@/pages/now.vue";
+import plan from "@/views/now/plan.vue";
 
 
 const router = createRouter({
@@ -15,7 +16,13 @@ const router = createRouter({
       path: '/',
       name: 'now',
       component: now
+    },
+    {
+      path: '/plan',
+      name: 'plan',
+      component: plan
     }
+
   ]
 })
 

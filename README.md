@@ -1,29 +1,10 @@
-# memory-love
+用来纪念自己苦逼爱情经历的网站
 
-This template should help get you started developing with Vue 3 in Vite.
+会把日记一样的内容放到这里存储起来
 
-## Recommended IDE Setup
+什么你说日记那么多该怎么放网站上  
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+鬼知道呢
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```

@@ -40,7 +40,7 @@ const  router = useRouter()
 
 const toAnotherPage = () =>{
   console.log( "hhh")
-  router.push('/memory')
+  router.push('/plan')
 }
 
 </script>

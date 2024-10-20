@@ -94,22 +94,22 @@ import { nextTick, onMounted, ref } from 'vue';
 import CartoonNavbar from '@/components/CartoonNavbar.vue';
 import CartoonCard from '@/components/CartoonCard.vue';
 import CartoonFooter from '@/components/CartoonFooter.vue';
-import First_start1 from '@/views/first_start1.vue';
-import First_start2 from '@/views/first_start2.vue';
-import First_start3 from '@/views/first_start3.vue';
-import First_start4 from '@/views/first_start4.vue';
-import Second_depress1 from '@/views/second_depress1.vue';
-import Second_depress2 from '@/views/second_depress2.vue';
-import Third_life1 from '@/views/third_life1.vue';
-import Third_life2 from '@/views/third_life2.vue';
-import Third_life3 from '@/views/third_life3.vue';
-import Fourth_different1 from '@/views/fourth_different1.vue';
-import Fourth_different2 from '@/views/fourth_different2.vue';
-import Fourth_different3 from '@/views/fourth_different3.vue';
-import Fifth_crazy1 from '@/views/fifth_crazy1.vue';
-import Fifth_crazy2 from '@/views/fifth_crazy2.vue';
-import Sixth_over1 from '@/views/sixth_over1.vue';
-import Sixth_over2 from '@/views/sixth_over2.vue';
+import First_start1 from '@/views/memory/first_start1.vue';
+import First_start2 from '@/views/memory/first_start2.vue';
+import First_start3 from '@/views/memory/first_start3.vue';
+import First_start4 from '@/views/memory/first_start4.vue';
+import Second_depress1 from '@/views/memory/second_depress1.vue';
+import Second_depress2 from '@/views/memory/second_depress2.vue';
+import Third_life1 from '@/views/memory/third_life1.vue';
+import Third_life2 from '@/views/memory/third_life2.vue';
+import Third_life3 from '@/views/memory/third_life3.vue';
+import Fourth_different1 from '@/views/memory/fourth_different1.vue';
+import Fourth_different2 from '@/views/memory/fourth_different2.vue';
+import Fourth_different3 from '@/views/memory/fourth_different3.vue';
+import Fifth_crazy1 from '@/views/memory/fifth_crazy1.vue';
+import Fifth_crazy2 from '@/views/memory/fifth_crazy2.vue';
+import Sixth_over1 from '@/views/memory/sixth_over1.vue';
+import Sixth_over2 from '@/views/memory/sixth_over2.vue';
 import {getData, insertData} from "@/tool/api.js";
 const activeIndex = ref('memory');
 
@@ -120,7 +120,7 @@ const activeIndex = ref('memory');
 
 onMounted(() => {
 
-  startCollect()
+  // startCollect()
   // nextTick(() => {
   //   new fullpage('#fullpage', {
   //     menu : '#fp-nav',
@@ -145,14 +145,13 @@ onMounted(() => {
   // });
 });
 
-const startCollect =  () => {
-  getData().then( res =>{
-    console.log(res.data)
-    insertData(res.data)
-  })
-
-
-}
+// const startCollect =  () => {
+//   getData().then( res =>{
+//     console.log(res.data)
+//     insertData(res.data)
+//   })
+//
+// }
 </script>
 
 <style scoped>
